@@ -20,7 +20,8 @@ CONFIG_TASKS="config_tasks.sh"  # Tasks configuration (Cleans directory, modifie
 # Input parameters
 INPUT_CASE=-1                   # Input case
 INPUT_LABEL="nothing"           # Input description
-INPUT_DIR="$PWD"                # Input directory
+#INPUT_DIR="$PWD"                # Input directory
+INPUT_DIR="$PWD/../Data"                # Input directory
 INPUT_PARENT_MASK=""            # Path replacement mask for the input directory of parent files in case of derived input AO2D.root. Set to ";" if no replacement needed.
 INPUT_FILES="AliESDs.root"      # Input file pattern
 INPUT_SYS="pp"                  # Collision system
@@ -59,9 +60,14 @@ FILEOUT_TREES="AnalysisResults_trees.root"
 FILEOUT_TREES_O2="AnalysisResults_trees_O2.root"
 
 # Steering commands
-ENV_ALI="alienv setenv AliPhysics/latest -c"
-ENV_O2="alienv setenv O2Physics/latest -c"
-ENV_POST="alienv setenv ROOT/latest -c"
+#ENV_ALI="alienv setenv AliPhysics/latest -c"
+#ENV_O2="alienv setenv O2Physics/latest -c"
+#ENV_POST="alienv setenv ROOT/latest -c"
+# Steering commands
+ENV_ALI="alienv -w sw_alp setenv AliPhysics/latest -c"
+ENV_O2="alienv -w sw_o2p setenv O2Physics/latest -c"
+#ENV_POST="alienv setenv ROOT/latest -c"
+ENV_POST=""
 
 # Step scripts
 SCRIPT_O2="script_o2.sh"

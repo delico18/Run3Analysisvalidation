@@ -25,14 +25,15 @@ JSONRUN5_ONIAX="dpl-config_run5_oniaX.json"
 JSON="$JSONRUN3"
 
 # Default settings:
-# INPUT_FILES="AliESDs.root"
+INPUT_FILES="AliESDs.root"
 # INPUT_SYS="pp"
 # INPUT_RUN=2
 # INPUT_IS_O2=0
 # INPUT_IS_MC=0
 # JSON="$JSONRUN3"
 
-INPUT_BASE="/data2/data" # alicecerno2
+#INPUT_BASE="/data2/data" # alicecerno2
+INPUT_BASE="/run/media/root/Storage1/ALICEO2/work/20240202/001/Run3Analysisvalidation/Data"
 
 case $INPUT_CASE in
   1)
@@ -40,9 +41,10 @@ case $INPUT_CASE in
     INPUT_DIR="$INPUT_BASE/Run2/pp_5.02TeV/real/LHC17p_pass1_CENT_woSDD"
     ;;
   2) # reference
-    INPUT_LABEL="Run 2, p-p 5.02 TeV LHC17p, MC LHC18a4a2_cent"
-    INPUT_DIR="$INPUT_BASE/Run2/pp_5.02TeV/sim/LHC18a4a2_cent/282099"
-    INPUT_IS_MC=1
+    INPUT_LABEL="Run 2, p-p 5.02 TeV LHC17p, pass1_CENT_wSDD"
+    #INPUT_DIR="$INPUT_BASE/Run2/pp_5.02TeV/sim/LHC18a4a2_cent/282099"
+    INPUT_DIR="$INPUT_BASE/alice/data/2017/LHC17p/000282343/pass1_CENT_wSDD/17000282343019.100"
+    INPUT_IS_MC=0
     ;;
   3)
     INPUT_LABEL="Run 2, p-p 5.02 TeV LHC17p, MC LHC18a4a2_cent"
